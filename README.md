@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# Expense Tracker Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is a **React + TypeScript** based expense tracker that allows users to manage and categorize their expenses effectively. It provides a streamlined interface to add, filter, and delete expenses, ensuring that users can keep track of their financial activities with ease.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Expense Management**: Users can add new expenses by providing a description, amount, and category. The app supports multiple categories such as Groceries, Utilities, and Entertainment.
+  
+- **Form Validation**: The app uses **Zod** for schema validation and **React Hook Form** to handle form state, ensuring that all expense inputs are valid before being added to the list.
 
-## Expanding the ESLint configuration
+- **Filtering**: Users can filter the list of expenses by category, allowing them to focus on specific areas of spending.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Expense List**: The app displays all expenses in a clean, tabular format. Each expense entry shows the description, amount, and category, with an option to delete any expense.
 
-- Configure the top-level `parserOptions` property like this:
+- **Dynamic Total Calculation**: The app dynamically calculates and displays the total of all visible expenses, giving users an overview of their spending.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React + TypeScript**: For building the user interface with strong typing.
+- **Vite**: For a fast development environment with hot module replacement.
+- **Zod**: For schema-based form validation.
+- **React Hook Form**: For managing form state and handling form submissions.
+- **Bootstrap**: For styling and responsive design.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
